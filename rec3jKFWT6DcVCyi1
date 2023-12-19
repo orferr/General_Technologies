@@ -1,0 +1,21 @@
+1.SELECT product_name, price * 0.995 AS discounted_price
+FROM products;
+
+2.SELECT order_number, customer_name, customer_country
+FROM orders
+WHERE customer_country != 'France';
+
+3.SELECT product_name, price * exchange_rate AS price_in_usd
+FROM products
+ORDER BY price DESC
+LIMIT 1;
+
+4.SELECT DISTINCT supplier_country
+FROM products
+WHERE category = 'Seafood';
+
+5.SELECT product_name, price
+FROM products
+WHERE category = 'Beverages' AND supplier_country = 'USA'
+ORDER BY price DESC
+LIMIT 2;
